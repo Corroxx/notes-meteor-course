@@ -43,8 +43,7 @@ export default class Signup extends Component {
           <input type="password" ref="password" name="password" placeholder="Password"/>
           <button className="button">Create Account</button>
         </form>
-        <p>Signup Component here</p>
-        <Link to="/"> Alrady have an Account?</Link>
+        <Link to="/"> Alrady have an Account ?</Link>
       </div>
       </div>
     )

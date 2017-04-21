@@ -2,7 +2,6 @@ import React from 'react';
 
 
 import PrivateHeader from './PrivateHeader';
-import {AddLink} from './AddLink';
 
 export default () => {
     return (

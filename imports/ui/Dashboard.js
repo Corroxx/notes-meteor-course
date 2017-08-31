@@ -4,6 +4,7 @@ import NoteList from './NoteList';
 
 import PrivateHeader from './PrivateHeader';
 import NoteListHeader from './NoteListHeader';
+import Editor from './Editor';
 
 export default () => {
     return (
@@ -12,6 +13,7 @@ export default () => {
         <div className="page-content">
           <NoteListHeader/>
           <NoteList/>
+          <Editor/>
         </div>
 
       </div>

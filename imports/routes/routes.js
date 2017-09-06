@@ -20,7 +20,7 @@ const onLeaveNotePage = () => {
 }
 
 export const onAuthChange = (isAuthenticated, currentPagePrivacy) => {
-  const isUnauthenticatedPage = currentPagePrivacy === 'unauth';
+const isUnauthenticatedPage = currentPagePrivacy === 'unauth';
   const isAuthenticatedPage = currentPagePrivacy ==='auth';
 
   if (isUnauthenticatedPage && isAuthenticated) {
@@ -38,7 +38,7 @@ export const globalOnChange = (prevState, nextState) => {
 }
 export const globalOnEnter = (nextState) => {
   //console.log('globalOnEnter');  
-  //console.log('nextState',nextState);
+  console.log('nextState',nextState);
   const lastRoute = nextState.routes[nextState.routes.length - 1];
   Session.set('currentPagePrivacy', lastRoute.privacy);   
 }

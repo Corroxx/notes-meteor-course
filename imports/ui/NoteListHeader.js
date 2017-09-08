@@ -1,21 +1,32 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
+import { Session } from 'meteor/session';
 
 export const NoteListHeader = (props) => {
     return (
         <div>
-            <button onClick={() => props.meteorCall('notes.insert')}>Add Note</button>
+            <button onClick={() => {
+                return (
+                    props.meteorCall('notes.insert', (err, res) => {
+                        if(res) {
+                            props.Session.set('selectedNoteId', res);
+                        }
+                    })
+                    
+                )}}>Add Note</button>
         </div>
     );
 };
 
 NoteListHeader.propTypes = {
-    meteorCall: React.PropTypes.func.isRequired
+    meteorCall: React.PropTypes.func.isRequired,
+    Session: React.PropTypes.object.isRequired
 }
 
 export default createContainer( () => {
     return {
-        meteorCall: Meteor.call
+        meteorCall: Meteor.call,
+        Session
     }
 }, NoteListHeader);

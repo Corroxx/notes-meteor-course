@@ -6,12 +6,14 @@ import { Session } from 'meteor/session'
 import { Notes } from '../api/notes';
 import NoteListEmptyItem from './NoteListEmptyItem';
 import NoteListItem from './NoteListItem';
+import NoteListHeader from './NoteListHeader';
 
 export const NoteList = (props) => {
     const noteCount = props.notes.length;
     return (
         <div className="item-list">
-            NoteList { noteCount }
+            <NoteListHeader/>
+            You have { noteCount } notes
             {props.notes.length === 0 && <NoteListEmptyItem/>}
             {props.notes.map((note) => <NoteListItem key={note._id} note={note}/>)}
         </div>

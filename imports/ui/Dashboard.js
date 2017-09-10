@@ -3,7 +3,6 @@ import React from 'react';
 import NoteList from './NoteList';
 
 import PrivateHeader from './PrivateHeader';
-import NoteListHeader from './NoteListHeader';
 import Editor from './Editor';
 
 export default () => {
@@ -11,8 +10,6 @@ export default () => {
       <div>
         <PrivateHeader title="Your Dashboard"/>
         <div className="page-content">
-        <NoteListHeader/>
-
           <div className="page-content__sidebar">
             <NoteList/>            
           </div>

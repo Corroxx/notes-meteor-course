@@ -14,7 +14,7 @@ meteor npm install
 meteor
 ```
 
-## Running th Tests
+## Running the Tests
 
 Running the tests is easy. All you have to do is run the following command and view the reporter at localhost port 3000.
 

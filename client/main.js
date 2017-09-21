@@ -20,6 +20,7 @@ Tracker.autorun(() => {
 
  if(selectedNoteId) {
    browserHistory.replace(`/dashboard/${selectedNoteId}`);
+   Session.set('isNavOpen', false);
  }
 });
 

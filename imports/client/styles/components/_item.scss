@@ -3,7 +3,8 @@
   border: 1px solid $grey;
   flex-grow: 1;
   overflow-y: scroll;
-  width: 100%
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .item-list__header {
